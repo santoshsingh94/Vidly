@@ -20,7 +20,9 @@ namespace Vidly.Models
         [Required]
         public byte GenreId { get; set; }
 
+        [Display(Name = "Date Added")]
         public DateTime DateAdded { get; set; }
+
 
         [Display(Name = "Release Date")]
         public DateTime ReleaseDate { get; set; }
@@ -29,6 +31,7 @@ namespace Vidly.Models
         [Range(1, 20)]
         public byte NumberInStock { get; set; }
 
+        [Display(Name = "Number Available")]
         public byte NumberAvailable { get; set; }
     }
 }
