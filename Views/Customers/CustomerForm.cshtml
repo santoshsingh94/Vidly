@@ -30,6 +30,15 @@
         </label>
     </div>
 
-    @Html.HiddenFor(m => m.Customer.Id);
+    @Html.HiddenFor(m => m.Customer.Id)
+    @Html.AntiForgeryToken()
     <button typeof="submit" class="btn btn-primary">Save</button>
 }
+
+@* Enabling Client side validation by default it is disabled in .net. It also uses the dataannotations
+    for validation but without round trip to server.
+    *@
+
+@section scripts{
+        @Scripts.Render("~/bundles/jqueryval")
+    }
